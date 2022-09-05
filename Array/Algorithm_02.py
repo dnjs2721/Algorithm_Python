@@ -1,9 +1,9 @@
-# num = [int(input()) for _ in range(3)]
-# cal = list(str(num[0]*num[1]*num[2]))
-# arr = [0]*10
-# for i in cal:
-#     arr[int(i)] += 1
-# print(*arr, sep='\n')
+num = [int(input()) for _ in range(3)]
+cal = list(str(num[0]*num[1]*num[2]))
+arr = [0]*10
+for i in cal:
+    arr[int(i)] += 1
+print(*arr, sep='\n')
 
 # count 이용
 # num = [int(input()) for _ in range(3)]
@@ -11,5 +11,3 @@
 # for i in range(10):
 #     temp = str(i)
 #     print(cal.count(temp))
-
-print(1//2)
