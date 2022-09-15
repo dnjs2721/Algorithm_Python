@@ -9,12 +9,12 @@ flag = False
 for i in x:
     while count <= i:
         stack.append(count)
-        result.append("+")
+        result.append('+')
         count +=1
 
     if stack[-1] == i:
         stack.pop()
-        result.append("-") 
+        result.append('-') 
     else:
         flag = True
         break
@@ -23,4 +23,4 @@ if flag == False:
     for j in result:
         print(j)
 else:
-    print("No")
+    print("NO")
