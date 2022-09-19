@@ -2,7 +2,7 @@ package Beginner.code_java;
 
 import java.util.*;
 
-public class Algoritm_13 {
+public class Algorithm_13 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<Integer> arr = new ArrayList<>();
