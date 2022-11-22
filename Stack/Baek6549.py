@@ -21,5 +21,5 @@ while True:
             width, h = stack.pop()
             res = max(res, (i - width) * h)
         stack.append((width,height[i]))
-        print(stack)
+
     print(res)
