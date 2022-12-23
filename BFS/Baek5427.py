@@ -16,9 +16,6 @@ def bfs():
             if dist[nx][ny] == '#' or fire_visted[nx][ny] != 0:
                 continue
             fire_visted[nx][ny] = fire_visted[x][y] + 1
-            # for j in fire_visted:
-            #     print(j)
-            # print("---------------------------------")
             fire_q.append((nx, ny))
     
     while user_q:
@@ -51,5 +48,3 @@ for _ in range(t):
             if dist[i][j] == '@':
                 user_q.append((i,j))
     print(bfs())
-    # for i in user_visted:
-    #     print(i)
