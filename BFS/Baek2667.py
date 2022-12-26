@@ -2,9 +2,6 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 
-dx = [0, 0, 1, -1]
-dy = [1, -1, 0, 0]
-
 def bfs():
     count = 1
     while q:
@@ -21,8 +18,11 @@ def bfs():
 
 n = int(input())
 dist = []
-q = deque()
 cnt = []
+
+dx = [0, 0, 1, -1]
+dy = [1, -1, 0, 0]
+q = deque()
 
 for _ in range(n):
     dist.append(list(map(int, input().rstrip())))
