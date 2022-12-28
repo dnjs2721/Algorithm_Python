@@ -46,4 +46,4 @@ while True:
     if visited[ez][ey][ex] == 0:
         print("Trapped!")
     else:
-        print(f'Escaped in {visited[ez][ey][ex]} minute(s)')
+        print(f'Escaped in {visited[ez][ey][ex]} minute(s).')
