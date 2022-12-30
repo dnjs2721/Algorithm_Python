@@ -19,7 +19,7 @@ def bfs():
             if nx < 0 or nx >= n or ny < 0 or ny >= m:
                 continue
             # 다음 이동할 곳이 벽이고, 벽파괴기회를 사용하지 않은 경우
-            # 벽이 있다면 z를 1로 변경후 
+            # 벽이 있다면 z를 1로 변경후 분기
             # 무조건 앞에 나타나는 벽만 부수는게 아닌 4방 중 벽이 아닌 곳이 있다면 아래 조건으로 이동한다.
             if dist[nx][ny] == 1 and z == 0:
                 visited[nx][ny][1] = visited[x][y][0] + 1
