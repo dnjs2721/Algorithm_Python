@@ -53,6 +53,7 @@ while True:
     if cnt > 1:
         print(year)
         break
+
     ice = sorted(list(set(ice) - set(delList)))
     year += 1
 
