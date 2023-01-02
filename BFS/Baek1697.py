@@ -16,7 +16,6 @@ def bfs():
         for nx in (x-1, x + 1, x * 2):
             if 0 <= nx <= max and not dist[nx]:
                 dist[nx] = dist[x] + 1
-                print(q)
                 q.append(nx)
 
 bfs()
