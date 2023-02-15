@@ -6,9 +6,7 @@ def solution(book_time):
     time = [(int(start[:2]) * 60 + int(start[3:]), int(end[:2]) * 60 + int(end[3:])) for start, end in book_time]
     time.sort()
     
-    print(time)
     heap = []
-    
     for start, end in time:
         if not heap:
             heapq.heappush(heap, end + 10)
