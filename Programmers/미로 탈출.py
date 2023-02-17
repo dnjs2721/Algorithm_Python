@@ -37,7 +37,7 @@ def bfs(i, j, maps):
                              
             q.append((ny, nx))
             visit[ny][nx] = visit[y][x] + 1
-    
+
     return -1
             
 print(solution(["SOOOL","XXXXO","OOOOO","OXXXX","OOOOE"]))
