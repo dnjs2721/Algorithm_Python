@@ -1,30 +1,18 @@
 def solution(order):
-    answer = 0
-    stack = []
-    box = 0
-    
-    for item in order:
-        while 1:
-            box += 1
-            if box == item:
-                answer += 1
-                break
-            else:
-                if stack:
-                    if stack[0] == box:
-                        stack.pop(0)
-                        answer += 1
-                        break
-                    else:
-                        stack.append(box)
-                        break
-                else:
-                    stack.append(box)
+    assist = []
+    i = 1
+    cnt = 0 
+    while i != len(order)+1:
+        assist.append(i)
+        while assist and assist[-1] == order[cnt]:
+            cnt += 1
+            assist.pop()  
+        i += 1
+        
+    return cnt
 
-    return answer
-
-print(solution([4, 3, 1, 2, 5]	))
-print(solution([5, 4, 3, 2, 1]	))
+print(solution([4, 3, 1, 2, 5]))
+print(solution([5, 4, 3, 2, 1]))
 
 # 택배 상자는 모두 크기가 같다
 # 1번 부터 n번 까지 순서대로 영재에게 전달된다
