@@ -8,7 +8,6 @@ def solution(order):
             cnt += 1
             assist.pop()  
         i += 1
-        
     return cnt
 
 print(solution([4, 3, 1, 2, 5]))
