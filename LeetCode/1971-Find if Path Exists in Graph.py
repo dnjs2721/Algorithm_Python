@@ -3,6 +3,10 @@ from collections import defaultdict
 
 class Solution:
     def validPath(self, n, edges, source, destination):
+        
+        if source == destination:
+            return True
+        
         visted = [False for _ in range(n)]
         
         dic = defaultdict(list)
@@ -13,6 +17,7 @@ class Solution:
         q = deque()
         q.append(source)
         visted[source] = True
+        
         while q:
             edge = q.popleft()
             for nextEdge in dic[edge]:
