@@ -7,7 +7,7 @@ class Solution:
         if source == destination:
             return True
         
-        visted = [False for _ in range(n)]
+        # visted = [False for _ in range(n)]
         
         dic = defaultdict(list)
         for edge, nextEdge in edges:
@@ -16,22 +16,21 @@ class Solution:
         
         q = deque()
         q.append(source)
-        visted[source] = True
+        visted = set([source])
+        # visted[source] = True
         
         while q:
             edge = q.popleft()
+            if edge == destination:
+                return True
             for nextEdge in dic[edge]:
-                if nextEdge == destination:
-                    return True
-                if visted[nextEdge] == False:
-                    visted[nextEdge] = True
+                # if visted[nextEdge] == False:
+                #     visted[nextEdge] = True
+                if nextEdge not in visted:
+                    visted.add(nextEdge)
                     q.append(nextEdge)
                        
         return False
-        
-n = 3
-edges = [[0,1],[1,2],[2,0]]
-source = 0
-destination = 2
 
-print(Solution().validPath(n, edges, source, destination))
+print(Solution().validPath(3, [[0,1],[1,2],[2,0]], 0, 2))
+print(Solution().validPath(6, [[0,1],[0,2],[3,5],[5,4],[4,3]], 0, 5))
