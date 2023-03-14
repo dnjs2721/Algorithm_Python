@@ -17,7 +17,7 @@ class Solution:
         q = deque()
         q.append(source)
         visted = set([source])
-        # visted[source] = True
+        # visted[source] = True.
         
         while q:
             edge = q.popleft()
