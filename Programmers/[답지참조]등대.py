@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10**6)
+
 def solution(n, lighthouse):
     answer = 0
     tree = [[] for _ in range(n+1)]
@@ -19,8 +22,7 @@ def solution(n, lighthouse):
                 off += child_on
             return on, off
 
-    answer = min(dfs(1, tree, visited))
-    return answer
+    return min(dfs(1, tree, visited))
 
 
 print(solution(8, [[1, 2], [1, 3], [1, 4], [1, 5], [5, 6], [5, 7], [5, 8]]))
