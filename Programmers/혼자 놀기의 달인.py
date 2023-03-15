@@ -1,6 +1,5 @@
 def solution(cards):
     answer = 0
-    
     visted = [0 for _ in range(len(cards))]
     groupVistedCountlist = []
     
@@ -20,7 +19,7 @@ def solution(cards):
         
             groupVistedCountlist.append(groupCount)
         
-    groupVistedCountlist.sort(reverse=1)
+    groupVistedCountlist.sort(reverse=True)
         
     if len(groupVistedCountlist) > 1:
         answer = groupVistedCountlist[0] * groupVistedCountlist[1]
