@@ -1,7 +1,6 @@
 from collections import deque
 
 def solution(board):
-    answer = -1
     n = len(board[0])
     m = len(board)
     visted = [[0 for _ in range(n)] for _ in range(m)]
@@ -9,14 +8,12 @@ def solution(board):
     dx = [0, 0, 1, -1]
     dy = [1, -1, 0, 0]
 
-    def bfs(a, b, c, d):
-        q = deque()
-        q.append((a, b))
-        visted[a][b] = 1
+    def bfs(a, b):
+        q = deque([(a, b)])
         while q:
             y, x = q.popleft()
-            if y == c and x == d:
-                return visted[c][d] - 1
+            if board[y][x] == 'G':
+                return visted[y][x]
             for i in range(4):
                 nx = x + dx[i]
                 ny = y + dy[i]
@@ -33,18 +30,10 @@ def solution(board):
                         break
         return -1
 
-    sx, sy = 0, 0
-    gx, gy = 0, 0
-
     for i in range(m):
         for j in range(n):
             if board[i][j] == 'R':
-                sy, sx = i, j
-            elif board[i][j] == 'G':
-                gy, gx = i, j
-
-    return bfs(sy, sx, gy, gx)
-
+                return bfs(i, j)
 
 print(solution(["...D..R", ".D.G...", "....D.D", "D....D.", "..D...."]))
 print(solution([".D.R", "....", ".G..", "...D"]))
