@@ -41,8 +41,6 @@ def solution(n, k):
         arr.append(s)
 
     for num in arr:
-        if '0' in num:
-            continue
         if check(int(num)):
             answer += 1
 
